@@ -5,15 +5,96 @@
  */
 package homework_mystere;
 
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author fcmam5
  */
 public class Second extends javax.swing.JFrame {
-int number = 1+ (int)(Math.random()*10);
+    
+int levelRange = 10;
+int number = 1+ (int)(Math.random()*levelRange);
 int mo7awala; 
 int life;
 int rounds;
+int level = 1;
+
+//LEVEL 3
+/**
+ * Level3: 
+ * You need to pass the level2
+ * And the range is [1-500]
+ */
+    void thirdLevel3(){
+            if((jTextField1.isEnabled())&&(level>2)){
+                JOptionPane.showConfirmDialog(this, "Oh brave, Good luck! \nYou'll need it","Level 3",JOptionPane.DEFAULT_OPTION);
+            //Reset game initial values
+            levelRange = 500;
+            number = 1+ (int)(Math.random()*levelRange);
+            this.mo7awala = 1;
+            life = 1;
+            this.rounds= 1;
+            //Set text to default
+            jLabel1.setText("Hey lucky! Now guess a number between 1 and 500");
+            jTextField1.setText(null);
+            //Get hearts back ^_^
+            life1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/heart.png"))); 
+            life2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/heart.png")));
+            life3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/heart.png")));
+            }
+            else
+                JOptionPane.showConfirmDialog(this, "Not today superman, try again!","Bad luck!",JOptionPane.DEFAULT_OPTION);
+        }
+    
+    /**
+     * Level 2
+     * The range is [1-100]
+     * You can play if you didn't failed in the 1st level (Text field isn't disabled)
+     */
+    void secondLevel2(){
+            if((jTextField1.isEnabled())&&(level>1)){
+            //Reset game initial values
+            levelRange = 100;
+            number = 1+ (int)(Math.random()*levelRange);
+            this.mo7awala = 1;
+            life = 1;
+            this.rounds= 1;
+            //Set text to default
+            jLabel1.setText("Level 2, Guess between 1 and 100");
+            jTextField1.setText(null);
+            //Get hearts back ^_^
+            life1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/heart.png"))); 
+            life2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/heart.png")));
+            life3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/heart.png")));
+            }
+            else
+              JOptionPane.showConfirmDialog(this, "That's cute Mr cheater, please Reset & play again","Trying to pass",JOptionPane.DEFAULT_OPTION);
+
+    }
+    
+    /**
+     * Level1
+     */
+    void firstlevel1(){
+           //Reset game initial values
+        levelRange = 10;
+        number = 1+ (int)(Math.random()*levelRange);
+        this.mo7awala = 1;
+        life = 1;
+        this.rounds= 1;
+        //Set text to default
+        jLabel1.setText("Good luck !");
+        jTextField1.setEditable(true);
+        jTextField1.setText(null);
+        //Get hearts back ^_^
+        life1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/heart.png"))); // NOI18N
+        life2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/heart.png"))); // NOI18N
+        life3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/heart.png")));
+        
+    }
+//************************************************************************************
     /**
      * Creates new form Second
      */
@@ -34,6 +115,7 @@ int rounds;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem2 = new javax.swing.JMenuItem();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
@@ -43,6 +125,15 @@ int rounds;
         life3 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+
+        jMenuItem2.setText("jMenuItem2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -126,6 +217,49 @@ int rounds;
 
         jLabel2.setIcon(new javax.swing.ImageIcon("/home/fcmam5/Desktop/homework11/02_kungfupanda2.gif")); // NOI18N
 
+        jMenu1.setText("Game");
+
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItem1.setText("New game");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem1);
+
+        jMenu2.setText("Change level");
+
+        jMenuItem3.setText("Level 1");
+        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem3ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem3);
+
+        jMenuItem4.setText("Level 2");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem4);
+
+        jMenuItem5.setText("Level 3");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
+        jMenu2.add(jMenuItem5);
+
+        jMenu1.add(jMenu2);
+
+        jMenuBar1.add(jMenu1);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -155,16 +289,33 @@ int rounds;
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
-        
+        try{
         if(rounds<=3)
         {
-            if ((number == Integer.parseInt(jTextField1.getText()))&& mo7awala<=7)
-                jLabel1.setText("You win !");
-        
+            if ((number == Integer.parseInt(jTextField1.getText()))&& mo7awala<=levelRange){
+                
+                level++;
+                switch(level){
+                    case 2: 
+                        new Win().setVisible(true);
+                        secondLevel2();
+                        break;
+                        
+                    case 3: 
+                        thirdLevel3();
+                        break;
+                    case 4: JOptionPane.showConfirmDialog(this, "Hello superLucky! \nPlease send me a screenshot at\nFacebook.com/Fcmam5.me","Super lucky !",JOptionPane.DEFAULT_OPTION);break;
+                }
+                
+               
+        }
             else{
-                 if(mo7awala<=7){
+                 if(mo7awala<=levelRange){
                      //Less than 7 tries
-                jLabel1.setText("More one try .. ("+mo7awala+") left");
+                     if(number < Integer.parseInt(jTextField1.getText()))
+                        jLabel1.setText("Less.. ");
+                     else
+                        jLabel1.setText("More !"); 
                 mo7awala++;
                  }
                  
@@ -189,8 +340,13 @@ int rounds;
         }
          else{
                     jTextField1.setEditable(false);
-                    jLabel1.setText("Bad luck x3 bro !");
+                    jLabel1.setText("Uh! Good luck next time, You'll need it");
                  }
+            }
+            catch(NumberFormatException eNumber){
+               JOptionPane.showMessageDialog(this, "Error my friend! Check why:\n"+eNumber,"Error !",JOptionPane.ERROR_MESSAGE);
+
+            }
   
     }//GEN-LAST:event_jTextField1ActionPerformed
 
@@ -198,6 +354,23 @@ int rounds;
         // TODO add your handling code here:
         jTextField1.selectAll();
     }//GEN-LAST:event_jTextField1MouseClicked
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+           firstlevel1();
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+                   firstlevel1();
+            }//GEN-LAST:event_jMenuItem3ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        secondLevel2();
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+       //LEVEL3
+        thirdLevel3();
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -238,6 +411,14 @@ int rounds;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JTextField jTextField1;

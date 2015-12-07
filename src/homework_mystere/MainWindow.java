@@ -60,7 +60,7 @@ public class MainWindow extends javax.swing.JFrame {
         jTextArea2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jTextArea2.setForeground(new java.awt.Color(255, 255, 255));
         jTextArea2.setRows(5);
-        jTextArea2.setText("Listen PO, let's play a game.\nI'm going to think of a number between 1 and 100.\nAnd you need to read my mind to figure it out."); // NOI18N
+        jTextArea2.setText("Listen PO, let's play a game.\nFor each level I'm going to think of a number.\nAnd you need to read my mind to figure it out."); // NOI18N
         jTextArea2.setBorder(null);
         jScrollPane1.setViewportView(jTextArea2);
 

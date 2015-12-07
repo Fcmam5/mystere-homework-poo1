@@ -151,7 +151,7 @@
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
                     <Property name="rows" type="int" value="5"/>
-                    <Property name="text" type="java.lang.String" value="Listen PO, let&apos;s play a game.&#xa;I&apos;m going to think of a number between 1 and 100.&#xa;And you need to read my mind to figure it out." noResource="true"/>
+                    <Property name="text" type="java.lang.String" value="Listen PO, let&apos;s play a game.&#xa;For each level I&apos;m going to think of a number.&#xa;And you need to read my mind to figure it out." noResource="true"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
                     </Property>

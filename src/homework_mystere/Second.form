@@ -237,7 +237,7 @@
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="2" name="/home/fcmam5/Desktop/homework11/02_kungfupanda2.gif"/>
+          <Image iconType="3" name="/po.gif"/>
         </Property>
       </Properties>
     </Component>

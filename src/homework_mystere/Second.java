@@ -215,7 +215,7 @@ int level = 1;
                 .addGap(49, 49, 49))
         );
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("/home/fcmam5/Desktop/homework11/02_kungfupanda2.gif")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/po.gif"))); // NOI18N
 
         jMenu1.setText("Game");
 

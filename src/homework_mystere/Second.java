@@ -292,7 +292,7 @@ int level = 1;
         try{
         if(rounds<=3)
         {
-            if ((number == Integer.parseInt(jTextField1.getText()))&& mo7awala<=levelRange){
+            if ((number == Integer.parseInt(jTextField1.getText()))&& mo7awala<=10){
                 
                 level++;
                 switch(level){
@@ -310,7 +310,7 @@ int level = 1;
                
         }
             else{
-                 if(mo7awala<=levelRange){
+                 if(mo7awala<=10){
                      //Less than 7 tries
                      if(number < Integer.parseInt(jTextField1.getText()))
                         jLabel1.setText("Less.. ");

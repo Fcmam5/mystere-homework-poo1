@@ -292,7 +292,7 @@ int level = 1;
         try{
         if(rounds<=3)
         {
-            if ((number == Integer.parseInt(jTextField1.getText()))&& mo7awala<=10){
+            if ((number == Integer.parseInt(jTextField1.getText()))&& mo7awala<=7){
                 
                 level++;
                 switch(level){
@@ -307,16 +307,16 @@ int level = 1;
                     case 4: JOptionPane.showConfirmDialog(this, "Hello superLucky! \nPlease send me a screenshot at\nFacebook.com/Fcmam5.me","Super lucky !",JOptionPane.DEFAULT_OPTION);break;
                 }
                 
-               
         }
             else{
-                 if(mo7awala<=10){
+                 if(mo7awala<=7){
                      //Less than 7 tries
                      if(number < Integer.parseInt(jTextField1.getText()))
                         jLabel1.setText("Less.. ");
                      else
                         jLabel1.setText("More !"); 
                 mo7awala++;
+                jTextField1.selectAll();
                  }
                  
                  else
@@ -339,8 +339,10 @@ int level = 1;
             }
         }
          else{
-                    jTextField1.setEditable(false);
+                    jTextField1.setEnabled(false);
                     jLabel1.setText("Uh! Good luck next time, You'll need it");
+                    JOptionPane.showConfirmDialog(this, "The mysterious number was: "+number,"Almost there :(",JOptionPane.DEFAULT_OPTION);
+
                  }
             }
             catch(NumberFormatException eNumber){
